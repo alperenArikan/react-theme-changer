@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-moon {
+  height: 10rem;
+  position: absolute;
+
+  animation: secondMove 5s linear infinite;
+  left: 10%;
+  top: 10%;
+}
+.main-sun {
+  height: 10rem;
+  position: absolute;
+
+  animation: Move 5s linear infinite;
+  left: 10%;
+  top: 10%;
+}
+@keyframes Move {
+  from {
+    transform: rotateX(0deg);
+    transform: translate(0, 2rem);
+  }
+
+  50% {
+    transform: translate(4rem, -2rem);
+  }
+  to {
+    transform: rotateX(360deg);
+    transform: translate(0, 2rem);
+  }
+}
+
+@keyframes secondMove {
+  from {
+    transform: translate(0, 2rem);
+  }
+
+  50% {
+    transform: translate(4rem, -2rem);
+  }
+  to {
+    transform: translate(0, 2rem);
+  }
+}
